@@ -30,7 +30,6 @@ To estimate the number of non-synonymous, synonymous and intergenic SNPs present
 5. Generate **bar chart** to compare the number of non-synonymous, synonymous and intergenic SNPs present in a sampled population.
 
 ## Result
- - The majority of mutations are Non-synonymous. 
  - All three contigs have Synonymous mutations. 
- - Future work - Explore gene functions associated with the Synonymous SNPs & also explore if any Intergenic SNPs lie in genomic regions important for microbial regulatory functions. 
+ - **Future work** - Explore gene functions associated with the Synonymous SNPs & also explore if any Intergenic SNPs lie in genomic regions important for microbial regulatory functions. 
 <img src=".\data\outputplot.png" alt="Drawing" style="width: 60px;"/>
