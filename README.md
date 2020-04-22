@@ -28,3 +28,6 @@ To estimate the number of non-synonymous, synonymous and intergenic SNPs present
     5. Finally, compare original & modified Amino Acids to annotate **Synonymous & Non-synomymous mutations**. 
 4. Label the rest as Intergenic mutations. 
 5. Generate **bar chart** to compare the number of non-synonymous, synonymous and intergenic SNPs present in a sampled population.
+
+## Result
+<img src=".\data\outputplot.png" alt="Drawing" style="width: 60px;"/>
