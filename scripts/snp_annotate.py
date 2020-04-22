@@ -2,6 +2,8 @@
 from Bio.Data import CodonTable
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 
 
 # Define some functions
@@ -105,3 +107,19 @@ for i in sub_index:
         
 # Populate kind column with information for Intergenic SNPs
 snps['kind'].fillna('Intergenic', inplace=True)
+
+
+#Plot bar chart. 
+x=[1,2,3,4,5,6,7,8,9]
+y=snps[['Contig','kind','Position']].groupby(['Contig','kind']).count().values
+one = mpatches.Patch(color = "green", label = "1")
+two = mpatches.Patch(color = "red", label = "2")
+three = mpatches.Patch(color = "blue", label = "3")
+
+plt.bar(x, y, color = ['green','red','blue','green','red','blue','green','red','blue'], edgecolor="black")
+plt.xticks([2,5,8], ['Non-synonymous', 'Synonymous', 'Intergenic'], fontsize = 7)
+plt.yticks(fontsize = 7)
+plt.ylabel("Number of SNPs", fontname = "Arial", fontsize = 7)
+plt.title("Mutation profile", fontname = "Arial", fontsize = 7)
+plt.legend(handles = [one, two, three], title = "Contig", fontsize='xx-small')
+plt.savefig("outputplot", format ='pdf')
